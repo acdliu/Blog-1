@@ -1,0 +1,44 @@
+---
+layout: default
+title: 你好，世界
+---
+<header>
+	<h1>Myblog</h1>
+	<p>难道不是为了工资</p>
+</header>
+<link rel="stylesheet" href="stylesheets/styles.css">
+<link rel="stylesheet" href="stylesheets/pygment_trac.css">
+<div id="banner">
+	<span id="logo"></span>
+	<a href="https://github.com/liyatang/MyBlog" class="button fork"><strong>View On GitHub</strong></a>
+	<div class="downloads">
+		<span>Downloads:</span>
+		<ul>
+			<li><a href="https://github.com/liyatang/MyBlog/zipball/master" class="button">ZIP</a></li>
+			<li><a href="https://github.com/liyatang/MyBlog/tarball/master" class="button">TAR</a></li>
+		</ul>
+	</div>
+	</div><!-- end banner -->
+	<div class="wrapper">
+		<nav>
+		<ul></ul>
+	</nav>
+	<section>
+		<hr><p>layout: default</p>
+		<h2>
+		<a name="title-%E6%88%91%E7%9A%84blog" class="anchor" href="#title-%E6%88%91%E7%9A%84blog"><span class="octicon octicon-link"></span></a>title: 我的Blog</h2>
+		<h2>
+		<a name="-pagetitle-" class="anchor" href="#-pagetitle-"><span class="octicon octicon-link"></span></a>{{ page.title }}</h2>
+		<p>最新文章</p>
+		<ul>
+			{% for post in site.posts %}
+			<li>{{ post.date | date_to_string }} <a href="%7B%7B%20site.baseurl%20%7D%7D%7B%7B%20post.url%20%7D%7D">{{ post.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+	<footer>
+		<p>Project maintained by <a href="https://github.com/liyatang">liyatang</a></p>
+		<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+	</footer>
+</div>
